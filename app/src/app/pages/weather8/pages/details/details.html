@@ -1,0 +1,53 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{weather.data | date:'MM/dd/yyyy h:mm a'}}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        Temperature
+      </ion-col>
+      <ion-col>
+        {{weather.temp}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Humidity
+      </ion-col>
+      <ion-col>
+        {{weather.humidity}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Pressure
+      </ion-col>
+      <ion-col>
+        {{weather.pressure}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Weather
+      </ion-col>
+      <ion-col>
+        {{weather.weather}}
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        Wind speed
+      </ion-col>
+      <ion-col>
+        {{weather.wind_speed}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

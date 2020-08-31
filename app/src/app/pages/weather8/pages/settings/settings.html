@@ -1,0 +1,26 @@
+<ion-header>
+    <ion-navbar>
+        <ion-title>{{title}}</ion-title>
+      </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+        <ion-col>
+          <ion-searchbar placeholder="Enter Your City" clearInput [(ngModel)]="city" (focus)="showKeyboard()"
+          (ionInput)="getCities()"></ion-searchbar>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <button ion-button full color="light" type="button" (click)="showForecastByCity()">Search</button>
+    </ion-row>
+  </ion-grid>
+  <ion-list *ngIf="showCitiesList">
+      <ion-item *ngFor="let city of cities" (click)="selectCity(city)">
+        {{ city }}
+      </ion-item>
+    </ion-list>  
+    <maps (getLocation)="getLocation($event)" [coordinates]="coordinates"></maps>
+</ion-content>

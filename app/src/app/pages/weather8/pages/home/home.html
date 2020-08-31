@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>{{title}}</ion-title>
+    <button ion-button round outline menuToggle>
+      <ion-icon name="menu" class="icon-menu"></ion-icon>
+    </button>
+  </ion-navbar>
+  <ion-toolbar>
+    <ion-title>{{city}}</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-list [virtualScroll]="weather" [approxItemHeight]=" '0px' " [headerFn]="myHeaderFn">
+    <ion-item-divider *virtualHeader="let header">
+      {{ header }}
+    </ion-item-divider>
+    <ion-item *virtualItem="let w" (click)="showDetails(w)">
+      <h3 class="item">{{w.data | date:'h:mm a' }}</h3>
+      <h3 class="item">temperature {{w.temp}} C</h3>
+    </ion-item>
+  </ion-list>
+</ion-content>

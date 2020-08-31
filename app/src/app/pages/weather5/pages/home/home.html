@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>aWeather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="bg">
+  <ion-grid *ngIf="weatherData">
+    <ion-row>
+      <ion-col>
+        <h2 class="location">{{weatherData.name}}</h2>
+        <div class="icon"></div>
+        <h3 class="desc">{{weatherData.weather[0].description}}</h3>
+        <h1 class="temp">{{weatherData.main.temp}}</h1>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-list>
+          <ion-item>
+            <strong>Temp Min: </strong> {{weatherData.main.temp_min}}
+          </ion-item>
+          <ion-item>
+            <strong>Temp Max: </strong> {{weatherData.main.temp_max}}
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col></ion-col>
+      <ion-col>
+        <div align="center">
+          <button ion-button
+                  class="greenAction" (click)="loadWeather()">Reload</button>
+        </div>
+      </ion-col>
+      <ion-col></ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

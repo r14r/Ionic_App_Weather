@@ -1,0 +1,6 @@
+{
+  "files.exclude": {
+    "app/node_modules": true,
+    "app/src/karma.conf.js": true
+  }
+}

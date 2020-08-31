@@ -1,0 +1,67 @@
+page-home {
+
+}
+
+
+#input input {
+  width: 100%;
+}
+
+form {
+  width: 100%;
+}
+
+
+table {
+  color: black;
+  padding: 2rem;
+  width: 100%;
+  box-shadow: 1px 1px 1px 1px darkgray;
+}
+
+tr {
+  background-color: white;
+  width: 100%;
+  margin: 0 auto 1em auto;
+  padding: 1em;
+  box-shadow: 1px 1px 0 darkgray;
+}
+
+#location {
+  color: black;
+  box-shadow: 1px 1px 1px 1px darkgray;
+  background-color: white;
+}
+
+#icon {
+  display: inline;
+  align-content: center;
+  margin-left: 50%;
+
+}
+
+#icon img {
+  display: inline;
+  max-width: 100%;
+  margin-left: 50%;
+  padding-left: 48%;
+
+}
+
+td {
+  padding: 1.2rem;
+}
+
+tr:hover {
+  background-color: wheat;
+}
+
+.start {
+  text-align: start;
+}
+
+.end {
+  text-align: end;
+}
+
+

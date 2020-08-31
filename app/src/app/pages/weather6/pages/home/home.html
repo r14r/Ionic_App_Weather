@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Weather</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home">
+  <ion-grid>
+    <ion-row>
+      <ion-col width-50 offset-25>
+
+        <h2 class="my-3 text-center">Get the current weather for your city</h2>
+
+        <form class="mx-auto align-content-center">
+          <div id="input" class="mx-auto align-content-center form-group">
+            <p class="lead">City name:</p>
+
+            <input (submit)="sendCityName()" id="city" name="city" class="form-control" [(ngModel)]="city_input">
+
+          </div>
+          <br>
+          <button (click)="sendCityName()" class="btn btn-info btn-block">Get weather</button>
+        </form>
+
+        <br>
+
+        <div *ngIf="temperature" class="align-content-center mt-3">
+          <p id="location" class="text-center lead align-content-center">Here's the weather for {{City_name}}, {{Country}}:</p>
+          <br>
+
+          <div id="icon" *ngIf="temperature" class="align-content-center my-3 mx-auto">
+            <img [src]="img_src" class="align-content-center my-3 mx-auto">
+          </div>
+
+          <br>
+          <table>
+
+            <tr>
+              <td class="start">temperature</td> <td class="end"> {{temperature}} &#8451;</td>
+            </tr>
+            <tr>
+              <td class="start">wind</td> <td class="end"> {{wind}} km/h</td>
+            </tr>
+            <tr>
+              <td class="start">description</td> <td class="end"> {{description}}</td>
+            </tr>
+          </table>
+
+
+        </div>
+
+
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+ </ion-content>
