@@ -1,3 +1,5 @@
+**/.env.d
+
 # Logs
 logs
 *.log
@@ -64,3 +66,6 @@ typings/
 .DS_Store
 
 .env
+**/.env.d
+**/.env
+
